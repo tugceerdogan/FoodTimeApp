@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/activity_main.xml" value="0.1578125" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_first_offer.xml" value="0.19375" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_second_offer.xml" value="0.19375" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_third_offer.xml" value="0.1796875" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/item_restaurants.xml" value="0.21014492753623187" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/login_fragment.xml" value="0.22282608695652173" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/register_fragment.xml" value="0.22282608695652173" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/restaurant_list_fragment.xml" value="0.21014492753623187" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
