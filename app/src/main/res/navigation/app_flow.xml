@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_flow"
     app:startDestination="@id/restaurantListFragment">
 
     <fragment
         android:id="@+id/restaurantListFragment"
-        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurants.RestaurantListFragment"
-        android:label="RestaurantListFragment" />
+        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurantsList.RestaurantListFragment"
+        android:label="RestaurantListFragment">
+        <action
+            android:id="@+id/action_restaurantListFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantDetailFragment"
+        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurantsDetail.RestaurantDetailFragment"
+        android:label="RestaurantDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>

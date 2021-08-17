@@ -1,4 +1,4 @@
-package com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurants
+package com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurantsList
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurants
+package com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurantsList
 
 import androidx.lifecycle.ViewModel
 
@@ -16,6 +16,6 @@ class RestaurantListViewModel @Inject constructor(
     val savedStateHandle: SavedStateHandle,
     val apiRepository: ApiRepository
 ) : ViewModel() {
-    fun fetchHospitalList(): LiveData<Resource<Restaurants>> =
+    fun fetchRestaurantList(): LiveData<Resource<Restaurants>> =
         apiRepository.getRestaurantList()
 }

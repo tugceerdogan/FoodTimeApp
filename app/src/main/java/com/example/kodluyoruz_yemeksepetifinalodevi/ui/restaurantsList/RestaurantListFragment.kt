@@ -1,4 +1,4 @@
-package com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurants
+package com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurantsList
 
 import android.os.Bundle
 import android.util.Log
@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.restaurant.RestaurantsItem
 import com.example.kodluyoruz_yemeksepetifinalodevi.databinding.RestaurantListFragmentBinding
+import com.example.kodluyoruz_yemeksepetifinalodevi.listeners.IRestaurantClickListener
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.Resource
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.gone
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.show
@@ -16,7 +19,6 @@ import com.example.kodluyoruz_yemeksepetifinalodevi.viewpager.FirstOfferFragment
 import com.example.kodluyoruz_yemeksepetifinalodevi.viewpager.SecondOfferFragment
 import com.example.kodluyoruz_yemeksepetifinalodevi.viewpager.ThirdOfferFragment
 import com.example.kodluyoruz_yemeksepetifinalodevi.viewpager.ViewPagerAdapter
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,8 +26,7 @@ class RestaurantListFragment : Fragment() {
 
     private lateinit var _binding: RestaurantListFragmentBinding
     private val viewModel: RestaurantListViewModel by viewModels()
-
-    private val hospitalListAdapter = RestaurantListAdapter()
+    private val restaurantListAdapter = RestaurantListAdapter()
 
 
     override fun onCreateView(
@@ -39,17 +40,15 @@ class RestaurantListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.fetchHospitalList().observe(viewLifecycleOwner, {
-            //it.status bizim için bir state
+        viewModel.fetchRestaurantList().observe(viewLifecycleOwner, {
             when (it.status) {
-                //Bu 3 farklı state de artık ui'ı yönetebilir hale geldik
                 Resource.Status.LOADING -> {
                     _binding.progressBar.show()
                 }
                 Resource.Status.SUCCESS -> {
                     _binding.progressBar.gone()
                     Log.v("HospitalList", "${it.data}")
-                    hospitalListAdapter.setData(it.data)
+                    restaurantListAdapter.setData(it.data)
                     initViews()
                 }
                 Resource.Status.ERROR -> {
@@ -61,7 +60,6 @@ class RestaurantListFragment : Fragment() {
         initViewPager()
     }
     private fun initViewPager() {
-        //Fragment List
         val fragmentList = arrayListOf(
             FirstOfferFragment(),
             SecondOfferFragment(),
@@ -76,21 +74,19 @@ class RestaurantListFragment : Fragment() {
     }
 
     private fun initViews() {
-        _binding.restaurantsRecyclerView.adapter = hospitalListAdapter
+        _binding.restaurantsRecyclerView.adapter = restaurantListAdapter
         _binding.restaurantsRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        /*hospitalListAdapter.setHospitalOnClickListener(object : IRestaurantClickListener {
+        restaurantListAdapter.setRestaurantOnClickListener(object : IRestaurantClickListener {
             override fun onClick(name: RestaurantsItem) {
 
-                Log.v("Error", "Error olmuyoooor")
                 val action =
-                    HospitalListFragmentDirections.actionHospitalListFragmentToHospitalDetailFragment(
-                        name.name,
-                        name.address
+                    RestaurantListFragmentDirections.actionRestaurantListFragmentToRestaurantDetailFragment(
+                        name.id
                     )
                 findNavController().navigate(action)
             }
-        })*/
+        })
     }
 
 }
