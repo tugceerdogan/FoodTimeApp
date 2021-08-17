@@ -16,4 +16,8 @@ class ApiRepository @Inject constructor(
         remoteDataSource.fetchMeals(id)
     }
 
+    fun getSearchRestaurantList(search:String)= performNetworkOperation {
+        remoteDataSource.searchRestaurants(search)
+    }
+
 }
