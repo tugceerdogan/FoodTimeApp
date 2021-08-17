@@ -60,13 +60,8 @@ class RestaurantListFragment : Fragment() {
         initViewPager()
     }
     private fun initViewPager() {
-        val fragmentList = arrayListOf(
-            FirstOfferFragment(),
-            SecondOfferFragment(),
-            ThirdOfferFragment()
-        )
-        val adapter =
-            ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
+        val fragmentList = arrayListOf(FirstOfferFragment(), SecondOfferFragment(), ThirdOfferFragment())
+        val adapter = ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
         _binding.apply {
             viewPager.adapter = adapter
             dotsIndicator.setViewPager2(viewPager)

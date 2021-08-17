@@ -45,13 +45,13 @@ class SearchRestaurantFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var job: Job?= null
-        _binding.restaurantSearch.addTextChangedListener {editable->
+        _binding.restaurantSearch.addTextChangedListener {searchEditable->
             job?.cancel()
             job = MainScope().launch {
-                delay(500L)
-                editable?.let{
-                    if(editable.toString().isNotEmpty()){
-                        viewModel.searchRestaurantList(editable.toString()).observe(viewLifecycleOwner, {
+                delay(200L)
+                searchEditable?.let{
+                    if(searchEditable.toString().isNotEmpty()){
+                        viewModel.searchRestaurantList(searchEditable.toString()).observe(viewLifecycleOwner, {
                             when (it.status) {
                                 Resource.Status.LOADING -> {
                                     _binding.progressBar.show()

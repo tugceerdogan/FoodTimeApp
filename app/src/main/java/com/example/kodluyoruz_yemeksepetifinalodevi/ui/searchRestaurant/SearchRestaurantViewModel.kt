@@ -13,7 +13,7 @@ import javax.inject.Inject
 class SearchRestaurantViewModel @Inject constructor(
 
     val savedStateHandle: SavedStateHandle,
-    val apiRepository: ApiRepository
+    private val apiRepository: ApiRepository
 ) : ViewModel() {
     fun searchRestaurantList(search:String): LiveData<Resource<Restaurants>> =
         apiRepository.getSearchRestaurantList(search)
