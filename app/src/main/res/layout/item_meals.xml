@@ -16,6 +16,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/imageViewMeal"
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:src="@drawable/ic_launcher_foreground" />
@@ -27,7 +28,7 @@
             android:layout_gravity="center_vertical">
 
             <TextView
-                android:id="@+id/meal_name"
+                android:id="@+id/TextViewName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -37,7 +38,7 @@
 
 
             <TextView
-                android:id="@+id/meal_ingredients"
+                android:id="@+id/TextViewIngredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -46,7 +47,7 @@
                 android:text="Ingredients" />
 
             <TextView
-                android:id="@+id/meal_price"
+                android:id="@+id/TextViewPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

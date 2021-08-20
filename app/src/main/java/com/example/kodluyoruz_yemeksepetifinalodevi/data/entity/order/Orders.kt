@@ -1,11 +1,11 @@
-package com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket
+package com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order
 
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.meal.MealsItem
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.restaurant.OrderRest
 import com.google.gson.annotations.SerializedName
 import java.util.*
 
-data class Basket(
+data class Orders(
     @SerializedName("_id")
     val id: String,
     @SerializedName("createdDate")

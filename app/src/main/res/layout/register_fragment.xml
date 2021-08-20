@@ -96,29 +96,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
-
-    <EditText
-        android:id="@+id/editTextAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="35dp"
-        android:layout_weight="5"
-        android:backgroundTint="@color/white"
-        android:drawablePadding="10dp"
-        android:hint="Address"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
-
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
@@ -135,5 +112,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAddress"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

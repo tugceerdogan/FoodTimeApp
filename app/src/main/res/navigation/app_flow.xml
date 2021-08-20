@@ -3,31 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_flow"
-    app:startDestination="@id/searchRestaurantFragment">
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment">
+
+        <action
+            android:id="@+id/action_loginFragment_to_restaurantListFragment"
+            app:destination="@id/restaurantListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.register.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/restaurantListFragment"
         android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurantsList.RestaurantListFragment"
-        android:label="RestaurantListFragment">
+        android:label="RestaurantListFragment"
+        tools:layout="@layout/restaurant_list_fragment">
+
+
         <action
             android:id="@+id/action_restaurantListFragment_to_restaurantDetailFragment"
             app:destination="@id/restaurantDetailFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/restaurantDetailFragment"
         android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.restaurantsDetail.RestaurantDetailFragment"
-        android:label="RestaurantDetailFragment" >
-        <argument
-            android:name="id"
-            app:argType="string"
-            app:nullable="true" />
+        android:label="RestaurantDetailFragment"
+        tools:layout="@layout/restaurant_detail_fragment">    <argument
+        android:name="id"
+        app:argType="string"
+        app:nullable="true" />
+        <action
+            android:id="@+id/action_restaurantDetailFragment_to_mealDetailFragment"
+            app:destination="@id/mealDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/searchRestaurantFragment"
-        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.searchRestaurant.SearchRestaurantFragment"
-        android:label="SearchRestaurantFragment" >
-        <action
-            android:id="@+id/action_searchRestaurantFragment_to_restaurantDetailFragment"
-            app:destination="@id/restaurantDetailFragment" />
-    </fragment>
+        android:id="@+id/mealDetailFragment"
+        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.mealDetail.MealDetailFragment"
+        android:label="meal_detail_fragment"
+        tools:layout="@layout/meal_detail_fragment">
+
+    <argument
+        android:name="mealId"
+        app:argType="string" />
+    <argument android:name="restaurantId" />
+</fragment>
 </navigation>

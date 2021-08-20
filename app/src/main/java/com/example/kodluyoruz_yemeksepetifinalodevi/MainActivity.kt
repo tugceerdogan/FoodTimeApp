@@ -2,8 +2,11 @@ package com.example.kodluyoruz_yemeksepetifinalodevi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.hide
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.show
@@ -30,9 +33,19 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.restaurantDetailFragment -> bottomNav.show()
-                else -> bottomNav.hide()
+
+                R.id.restaurantDetailFragment->bottomNav.hide()
+                R.id.mealDetailFragment->bottomNav.hide()
+                R.id.loginFragment->bottomNav.hide()
+                R.id.registerFragment->bottomNav.hide()
+
+                else -> bottomNav.show()
             }
         }
+
+
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return item.onNavDestinationSelected(findNavController(R.id.nav_host_fragment)) || super.onOptionsItemSelected(item)
     }
 }

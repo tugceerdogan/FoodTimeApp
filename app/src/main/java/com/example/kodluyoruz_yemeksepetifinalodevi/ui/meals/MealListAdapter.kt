@@ -3,24 +3,26 @@ package com.example.kodluyoruz_yemeksepetifinalodevi.ui.meals
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.meal.Meals
+import com.bumptech.glide.Glide
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.meal.MealsItem
 import com.example.kodluyoruz_yemeksepetifinalodevi.databinding.ItemMealsBinding
 import com.example.kodluyoruz_yemeksepetifinalodevi.listeners.IMealClickListener
 
 
 class MealListAdapter: RecyclerView.Adapter<MealListAdapter.MealListViewHolder>() {
-    var mealList: Meals? = null
+    private var mealList = ArrayList<MealsItem>()
 
     private var listener: IMealClickListener? = null
 
     class MealListViewHolder(val binding: ItemMealsBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(MealsItem: MealsItem, listener: IMealClickListener?) {
-            binding.mealName.text = MealsItem.name
-            binding.mealPrice.text = MealsItem.price
-            binding.itemFoodCardView.setOnClickListener { listener?.onClick(MealsItem) }
+        fun bind(meal: MealsItem, listener: IMealClickListener?) {
+            binding.TextViewName.text = meal.name
+            binding.TextViewPrice.text = meal.price
+            Glide.with(binding.imageViewMeal.context)
+                .load(meal.imageUrl).into(binding.imageViewMeal)
+            binding.itemFoodCardView.setOnClickListener { listener?.onClick(meal) }
         }
     }
 
@@ -39,9 +41,9 @@ class MealListAdapter: RecyclerView.Adapter<MealListAdapter.MealListViewHolder>(
         }
     }
     override fun getItemCount(): Int {
-        return mealList!!.size
+        return mealList.size
     }
-    fun setData(newList: Meals?) {
+    fun setMeals(newList: ArrayList<MealsItem>) {
         mealList = newList
         notifyDataSetChanged()
     }

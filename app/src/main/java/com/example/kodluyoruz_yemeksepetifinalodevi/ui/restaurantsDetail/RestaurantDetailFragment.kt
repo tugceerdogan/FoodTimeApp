@@ -7,8 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.kodluyoruz_yemeksepetifinalodevi.R
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.meal.MealsItem
 import com.example.kodluyoruz_yemeksepetifinalodevi.databinding.RestaurantDetailFragmentBinding
 import com.example.kodluyoruz_yemeksepetifinalodevi.listeners.IMealClickListener
@@ -41,7 +45,7 @@ class RestaurantDetailFragment : Fragment() {
 
 
 
-        viewModel.fetchMealList(args.id!!).observe(viewLifecycleOwner, {
+        viewModel.getRestaurantDetail(args.id!!).observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.LOADING -> {
                     _binding.progressBar.show()
@@ -49,7 +53,15 @@ class RestaurantDetailFragment : Fragment() {
                 Resource.Status.SUCCESS -> {
                     _binding.progressBar.gone()
                     Log.v("Restaurant List", "${it.data}")
-                    mealListAdapter.setData(it.data)
+
+                    val restaurant = it.data!!.data
+                    val options = RequestOptions().placeholder(R.mipmap.ic_launcher)
+                    Glide.with(_binding.imageViewRestaurant.context)
+                        .applyDefaultRequestOptions(options)
+                        .load(restaurant.image).into(_binding.imageViewRestaurant)
+                    _binding.textViewRestaurantName.text = restaurant.name
+                    _binding.textViewRestaurantAddress.text=restaurant.district
+                    mealListAdapter.setMeals(restaurant.meals)
                     initViews()
                 }
                 Resource.Status.ERROR -> {
@@ -66,6 +78,12 @@ class RestaurantDetailFragment : Fragment() {
 
         mealListAdapter.setMealOnClickListener(object : IMealClickListener {
             override fun onClick(name: MealsItem) {
+                val action =
+                RestaurantDetailFragmentDirections.actionRestaurantDetailFragmentToMealDetailFragment(
+                    name.id,
+                    args.id.toString()
+                )
+                findNavController().navigate(action)
 
 
             }

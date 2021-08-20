@@ -40,15 +40,15 @@ class RestaurantListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.fetchRestaurantList().observe(viewLifecycleOwner, {
+        viewModel.getRestaurants().observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.LOADING -> {
                     _binding.progressBar.show()
                 }
                 Resource.Status.SUCCESS -> {
                     _binding.progressBar.gone()
-                    Log.v("HospitalList", "${it.data}")
-                    restaurantListAdapter.setData(it.data)
+                    viewModel.restaurantList = it.data?.restaurantList
+                    setRestaurants(viewModel.restaurantList)
                     initViews()
                 }
                 Resource.Status.ERROR -> {
@@ -67,6 +67,12 @@ class RestaurantListFragment : Fragment() {
             dotsIndicator.setViewPager2(viewPager)
         }
     }
+    private fun setRestaurants(restaurantList : List<RestaurantsItem>?){
+
+        restaurantListAdapter.setData(restaurantList)
+        _binding.restaurantsRecyclerView.adapter = restaurantListAdapter
+
+    }
 
     private fun initViews() {
         _binding.restaurantsRecyclerView.adapter = restaurantListAdapter
@@ -76,6 +82,7 @@ class RestaurantListFragment : Fragment() {
             override fun onClick(name: RestaurantsItem) {
 
                 val action =
+
                     RestaurantListFragmentDirections.actionRestaurantListFragmentToRestaurantDetailFragment(
                         name.id
                     )

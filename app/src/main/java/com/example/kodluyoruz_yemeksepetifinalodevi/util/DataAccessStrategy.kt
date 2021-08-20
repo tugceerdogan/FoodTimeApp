@@ -2,6 +2,8 @@ package com.example.kodluyoruz_yemeksepetifinalodevi.util
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.login.LoginResponse
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.register.RegisterResponse
 import kotlinx.coroutines.Dispatchers
 
 fun <T> performNetworkOperation(call: suspend () -> Resource<T>): LiveData<Resource<T>> {
@@ -25,5 +27,32 @@ fun <T> performNetworkOperation(call: suspend () -> Resource<T>): LiveData<Resou
             )
         }
 
+    }
+}
+
+fun <T> performAuthTokenNetworkOperation(
+    call: suspend () -> Resource<T>,
+    saveToken: (token: String) -> Unit,
+): LiveData<Resource<T>> {
+    return liveData(Dispatchers.IO) {
+        emit(Resource.loading())
+        val networkCall = call.invoke()
+        if (networkCall.status == Resource.Status.SUCCESS) {
+            val data = networkCall.data!!
+
+            if (data is LoginResponse) {
+                saveToken(data.token)
+            }
+            if (data is RegisterResponse) {
+                saveToken(data.token)
+            }
+            emit(Resource.success(data))
+        } else if (networkCall.status == Resource.Status.ERROR) {
+            emit(
+                Resource.error(
+                    "Error: ${networkCall.message}"
+                )
+            )
+        }
     }
 }

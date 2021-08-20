@@ -1,17 +1,31 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.data.remote
 
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.login.LoginRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.register.RegisterRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.BaseDataSource
 import javax.inject.Inject
 
 
 class RemoteDataSource @Inject constructor(private val apiService: NetworkApiService) :
-    BaseDataSource(){
+    BaseDataSource() {
 
-    suspend fun fetchRestaurants() = getResult { apiService.getRestaurants() }
+    suspend fun getRestaurants() = getResult { apiService.getRestaurants() }
 
-    suspend fun fetchMeals(id:String)=getResult { apiService.getMeals(id.toInt()) }
+    suspend fun getRestaurantsByCuisine(cuisine: String) =
+        getResult { apiService.getRestaurantsByCuisine(cuisine) }
 
-    suspend fun searchRestaurants(search:String)=getResult { apiService.searchRestaurants(search) }
+    suspend fun getRestaurantById(id: String) = getResult { apiService.getRestaurantById(id) }
 
+
+    suspend fun getMealById(id: String) = getResult { apiService.getMealById(id) }
+
+
+    suspend fun postLogin(request: LoginRequest) = getResult {
+        apiService.login(request)
+    }
+
+    suspend fun postRegister(request: RegisterRequest) = getResult {
+        apiService.register(request)
+    }
 
 }

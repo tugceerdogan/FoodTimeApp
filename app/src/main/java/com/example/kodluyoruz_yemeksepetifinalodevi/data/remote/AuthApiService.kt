@@ -1,28 +1,37 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.data.remote
 
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddResponse
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketResponse
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.Basket
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.user.User
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.user.UserRequest
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.user.UserResponse
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddResponse
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderResponse
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.UserRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.UserResponse
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.User
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface AuthApiService {
 
+
     @POST("a/order")
-    suspend fun postOrder(@Body request: BasketRequest): Response<BasketResponse>
+    suspend fun postOrder(@Body request: OrderAddRequest): Response<OrderAddResponse>
 
     @GET("a/order")
-    suspend fun getOrders(): Response<Basket>
+    suspend fun getOrders(): Response<OrderResponse>
+
+    @POST("a/order")
+    suspend fun postBasket(@Body request: BasketAddRequest): Response<BasketAddResponse>
+
+    @GET("a/order")
+    suspend fun getBasket(): Response<BasketResponse>
+
 
     @PUT("auth/updateDetails")
-    suspend fun updateUser(@Body request : UserRequest) : Response<User>
+    suspend fun updateUser(@Body request: UserRequest): Response<User>
 
     @GET("auth/profile")
-    suspend fun getUser() : Response<UserResponse>
+    suspend fun getUser(): Response<UserResponse>
 }
