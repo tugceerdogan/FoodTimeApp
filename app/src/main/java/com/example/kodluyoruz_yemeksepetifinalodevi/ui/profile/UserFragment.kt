@@ -38,9 +38,9 @@ class UserFragment : Fragment() {
                 image?.toInt()
             } catch (e : Exception) {
                 Log.v("Profile Avatar", e.message.toString())
-                R.mipmap.ic_launcher
+                R.drawable.food_blogger
             }
-            return resource ?: R.mipmap.ic_launcher
+            return resource ?: R.drawable.food_blogger
         }
     }
 
@@ -74,7 +74,6 @@ class UserFragment : Fragment() {
         {
             _binding.profileProgressBar.show()
             _binding.myProfileTextView.gone()
-            _binding.profileChange.gone()
             _binding.personalDetailsTextView.gone()
             _binding.ProfileCardView.gone()
             _binding.linearLayout2.gone()
@@ -83,7 +82,6 @@ class UserFragment : Fragment() {
         else{
             _binding.profileProgressBar.gone()
             _binding.myProfileTextView.show()
-            _binding.profileChange.show()
             _binding.personalDetailsTextView.show()
             _binding.ProfileCardView.show()
             _binding.linearLayout2.show()
@@ -93,15 +91,15 @@ class UserFragment : Fragment() {
     private fun setField(user: User?) {
         _binding.nameTextView.text = user?.name
         _binding.mailTextView.text = user?.email
-        _binding.phoneNumberTextView.text = user?.phone
-        _binding.addressTextView.text = user?.address
+       // _binding.phoneNumberTextView.text = user?.phone
+       // _binding.addressTextView.text = user?.address
         _binding.profilePhotoImageView.setImageResource(getImageResource(user?.profileImage))
     }
 
     private fun addListeners() {
-        _binding.profileChange.setOnClickListener {
+      //  _binding.profileChange.setOnClickListener {
 
-        }
+       // }
         _binding.logOutCardView.setOnClickListener {
             viewModel.logOut()
             val action=UserFragmentDirections.actionUserFragmentToSplashFragment()

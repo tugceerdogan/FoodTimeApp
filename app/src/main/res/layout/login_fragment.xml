@@ -50,20 +50,21 @@
         android:id="@+id/textinputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEnterAccount" >
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        app:helperText="example@example.com"
+        android:hint="Email"
+        app:helperTextEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnterAccount">
 
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_weight="15"
+            android:layout_height="match_parent"
             android:backgroundTint="@color/white"
             android:drawablePadding="10dp"
-            android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="15dp"
             android:paddingStart="20dp"
@@ -73,7 +74,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,31 +83,30 @@
         android:id="@+id/textinputLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:endIconMode="password_toggle"
-        app:layout_constraintTop_toBottomOf="@+id/textinputLayout" >
-
-
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="35dp"
-        android:layout_weight="5"
-        android:backgroundTint="@color/white"
-        android:drawablePadding="10dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColor="#5A453F"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:endIconMode="password_toggle"
+        app:layout_constraintTop_toBottomOf="@+id/textinputLayout">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#5A453F"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -119,7 +119,7 @@
         android:layout_marginStart="45dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="45dp"
-        android:backgroundTint="#FC9A35"
+        android:backgroundTint="#f4ab1e"
         android:fontFamily="@font/kleeone"
         android:padding="12dp"
         android:text="Login"
@@ -140,7 +140,7 @@
         android:layout_marginStart="45dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="45dp"
-        android:backgroundTint="#D15237"
+        android:backgroundTint="#1d454d"
         android:fontFamily="@font/kleeone"
         android:padding="12dp"
         android:text="Register"
