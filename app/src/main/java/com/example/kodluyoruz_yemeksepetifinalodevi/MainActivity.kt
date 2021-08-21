@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
 
-                R.id.restaurantDetailFragment->bottomNav.hide()
-                R.id.mealDetailFragment->bottomNav.hide()
+                R.id.onboardingFragment->bottomNav.hide()
+                R.id.splashFragment -> bottomNav.hide()
                 R.id.loginFragment->bottomNav.hide()
                 R.id.registerFragment->bottomNav.hide()
 

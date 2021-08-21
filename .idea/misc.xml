@@ -3,18 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/drawable/button.xml" value="0.2703125" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/basket_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_base.xml" value="0.25416666666666665" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_first_offer.xml" value="0.19375" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_first_onboarding.xml" value="0.22056159420289856" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_onboarding.xml" value="0.22056159420289856" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_second_offer.xml" value="0.19375" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_second_onboard.xml" value="0.22056159420289856" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_third_offer.xml" value="0.1796875" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/fragment_third_onboarding.xml" value="0.22056159420289856" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/item_ingredient_check.xml" value="0.22056159420289856" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/item_meals.xml" value="0.25416666666666665" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/item_restaurants.xml" value="0.21014492753623187" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/login_fragment.xml" value="0.22282608695652173" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/meal_detail_fragment.xml" value="0.22056159420289856" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/order_fragment.xml" value="0.22056159420289856" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/register_fragment.xml" value="0.22282608695652173" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/restaurant_detail_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/restaurant_list_fragment.xml" value="0.21014492753623187" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/search_restaurant_fragment.xml" value="0.20742753623188406" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/user_fragment.xml" value="0.264" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
