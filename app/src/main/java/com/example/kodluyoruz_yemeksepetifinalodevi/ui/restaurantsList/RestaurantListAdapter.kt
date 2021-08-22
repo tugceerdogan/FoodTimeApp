@@ -20,7 +20,7 @@ class RestaurantListAdapter : RecyclerView.Adapter<RestaurantListAdapter.Restaur
 
         fun bind(RestaurantsItem: RestaurantsItem, listener: IRestaurantClickListener?) {
             binding.restaurantName.text = RestaurantsItem.name
-            binding.restaurantAddress.text = RestaurantsItem.address
+            binding.restaurantAddress.text = RestaurantsItem.district
             Glide.with(binding.imageViewRestaurant.context).load(RestaurantsItem.image).into(binding.imageViewRestaurant)
             binding.itemRestaurantsCardView.setOnClickListener { listener?.onClick(RestaurantsItem) }
         }

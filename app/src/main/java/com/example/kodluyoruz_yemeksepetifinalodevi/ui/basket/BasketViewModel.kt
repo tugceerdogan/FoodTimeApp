@@ -16,6 +16,6 @@ class BasketViewModel @Inject constructor(
 ) : ViewModel() {
 
     fun getBaskets(): LiveData<Resource<BasketResponse>> =
-        apiRepository.getOrder()
+        apiRepository.getBasket()
 
 }

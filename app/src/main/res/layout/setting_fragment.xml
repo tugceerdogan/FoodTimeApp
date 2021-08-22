@@ -33,7 +33,7 @@
                     android:layout_marginHorizontal="24dp"
                     android:orientation="horizontal">
 
-                    <androidx.appcompat.widget.AppCompatImageView
+                    <ImageView
                         android:id="@+id/backImageView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -44,8 +44,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Settings"
+                        android:fontFamily="@font/notosanskrmedium"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="#573621"
                         android:textSize="25sp" />
                 </LinearLayout>
 
@@ -62,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:text="Information"
-                        android:textColor="@color/black"
+                        android:textColor="#a36846"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -93,7 +94,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
 
-                            <androidx.appcompat.widget.AppCompatImageView
+                            <ImageView
                                 android:id="@+id/avatarImageView"
                                 android:layout_width="91dp"
                                 android:layout_height="100dp"
@@ -106,12 +107,12 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                        <androidx.appcompat.widget.AppCompatEditText
+                        <EditText
                             android:id="@+id/nameEditText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="40dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_marginTop="1dp"
                             android:layout_weight="1"
                             android:hint="Update Your Name"
                             android:textColor="@color/black"
@@ -119,7 +120,7 @@
                             app:layout_constraintStart_toEndOf="@+id/avatarConstraintLayout"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <androidx.appcompat.widget.AppCompatEditText
+                        <EditText
                             android:id="@+id/mailEditText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -131,7 +132,7 @@
                             app:layout_constraintStart_toEndOf="@+id/avatarConstraintLayout"
                             app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
 
-                        <androidx.appcompat.widget.AppCompatEditText
+                        <EditText
                             android:id="@+id/phoneNumberEditText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -144,7 +145,7 @@
                             app:layout_constraintStart_toEndOf="@+id/avatarConstraintLayout"
                             app:layout_constraintTop_toBottomOf="@+id/mailEditText" />
 
-                        <androidx.appcompat.widget.AppCompatEditText
+                        <EditText
                             android:id="@+id/addressEditText"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
@@ -153,9 +154,9 @@
                             android:layout_weight="1"
                             android:hint="Update Your Address"
                             android:textSize="15sp"
-
                             app:layout_constraintStart_toEndOf="@+id/avatarConstraintLayout"
                             app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -165,7 +166,7 @@
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginTop="10dp"
                     android:text="Payment Methods"
-                    android:textColor="@color/black"
+                    android:textColor="#a36846"
                     android:textSize="20sp" />
 
                 <androidx.cardview.widget.CardView
@@ -206,7 +207,7 @@
 
                         </RadioGroup>
 
-                        <androidx.appcompat.widget.AppCompatImageView
+                        <ImageView
                             android:id="@+id/bankCardImageView"
                             android:layout_width="59dp"
                             android:layout_height="54dp"
@@ -219,7 +220,7 @@
                             app:layout_constraintVertical_bias="0.53999996"
                             app:srcCompat="@drawable/ic_baseline_credit_card_24" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
+                        <ImageView
                             android:id="@+id/payDoorImageView"
                             android:layout_width="62dp"
                             android:layout_height="38dp"
@@ -236,7 +237,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     app:cornerRadius="10dp"
-                    android:backgroundTint="#89e56a"
+                    android:backgroundTint="#fec133"
                     android:id="@+id/updateButton"
                     android:layout_margin="20dp"
                     android:layout_width="match_parent"

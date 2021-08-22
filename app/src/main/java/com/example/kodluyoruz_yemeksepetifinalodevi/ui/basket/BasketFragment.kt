@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isEmpty
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +21,7 @@ class BasketFragment : Fragment() {
     private var binding: BasketFragmentBinding? = null
     private val viewModel: BasketViewModel by viewModels()
     val adapter = BasketAdapter()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -49,6 +52,14 @@ class BasketFragment : Fragment() {
                         binding?.basketRecyclerView?.layoutManager = LinearLayoutManager(context)
                         binding?.basketRecyclerView?.adapter = adapter
                         adapter.setBasketList(it)
+
+                        if(response.data?.orderList?.size ==0){
+
+                            binding?.basketRecyclerView?.isVisible = false
+                            binding?.dataEmpty?.isVisible = true
+
+
+                        }
                         setLoading(false)
                     }
 
@@ -56,7 +67,7 @@ class BasketFragment : Fragment() {
 
                 Resource.Status.ERROR -> {
                     println("${response.message}")
-                    Log.v("basket",response.toString())
+                    Log.v("basket", response.toString())
                     setLoading(false)
                 }
             }
@@ -64,13 +75,10 @@ class BasketFragment : Fragment() {
     }
 
     private fun setLoading(isLoading: Boolean) {
-        if(isLoading)
-        {
+        if (isLoading) {
             binding?.basketProgressBar?.show()
             binding?.basketRecyclerView?.gone()
-        }
-        else
-        {
+        } else {
             binding?.basketProgressBar?.gone()
             binding?.basketRecyclerView?.show()
         }

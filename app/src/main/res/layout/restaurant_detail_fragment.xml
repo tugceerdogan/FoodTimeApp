@@ -7,26 +7,11 @@
     android:layout_height="match_parent">
 
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <include
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#e5e8ed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/white">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:padding="10dp"
-            android:scaleType="fitXY"
-            android:layout_gravity="center"
-            android:src="@drawable/food_time_title" />
-
-    </com.google.android.material.appbar.MaterialToolbar>
+        layout="@layout/toolbar" />
 
 
     <ImageView
@@ -37,7 +22,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/restaurantt_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topAppBar"
@@ -52,7 +37,7 @@
         android:text="Restaurant Name"
         android:textStyle="bold"
         android:textColor="#573621"
-        android:textSize="30sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurant" />
@@ -62,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:fontFamily="@font/kleeone"
         android:textColor="#a36846"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,12 +68,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mealsRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="387dp"
+        android:layout_height="244dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu" />
 

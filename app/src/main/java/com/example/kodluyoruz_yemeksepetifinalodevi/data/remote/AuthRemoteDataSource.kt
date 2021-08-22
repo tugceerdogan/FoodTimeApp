@@ -13,9 +13,9 @@ class AuthRemoteDataSource @Inject constructor(private val authAPIService: AuthA
     suspend fun updateUser(request: UserRequest) = getResult { authAPIService.updateUser(request) }
 
 
-    suspend fun getOrders() = getResult { authAPIService.getOrders() }
+    suspend fun getBaskets() = getResult { authAPIService.getOrders() }
 
-    suspend fun postOrder(basketAddRequest: BasketAddRequest) = getResult {
+    suspend fun postBaskets(basketAddRequest: BasketAddRequest) = getResult {
         authAPIService.postOrder(basketAddRequest)
     }
 

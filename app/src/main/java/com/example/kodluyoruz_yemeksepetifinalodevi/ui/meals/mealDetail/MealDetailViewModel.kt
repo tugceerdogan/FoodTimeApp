@@ -24,5 +24,5 @@ class MealDetailsViewModel @Inject constructor(
     }
 
     fun postOrder(basketAddRequest: BasketAddRequest): LiveData<Resource<BasketAddResponse>> =
-        apiRepository.postOrder(basketAddRequest)
+        apiRepository.postBasket(basketAddRequest)
 }

@@ -5,27 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <com.google.android.material.appbar.MaterialToolbar
+    <include
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#e5e8ed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/white">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:padding="10dp"
-            android:scaleType="fitXY"
-            android:layout_gravity="center"
-            android:src="@drawable/food_time_title" />
-
-    </com.google.android.material.appbar.MaterialToolbar>
+        layout="@layout/toolbar" />
 
     <LinearLayout
         android:layout_width="413dp"
@@ -55,7 +39,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="11dp"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -162,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:backgroundTint="#89e56a"
+                android:backgroundTint="#fec133"
                 android:text="Update Profile"
                 android:textAllCaps="false"
                 app:cornerRadius="10dp" />
@@ -172,7 +157,7 @@
                 android:id="@+id/logOutCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#FF1300"
+                android:backgroundTint="#ea6325"
                 android:text="Log Out"
                 android:textAllCaps="false"
                 app:cornerRadius="10dp" />

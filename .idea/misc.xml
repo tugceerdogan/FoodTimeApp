@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/drawable-v24/ic_back.xml" value="0.2703125" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/drawable/bottom_color.xml" value="0.2703125" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/drawable/button.xml" value="0.2703125" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/basket_fragment.xml" value="0.20416666666666666" />
@@ -28,7 +29,10 @@
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/restaurant_detail_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/restaurant_list_fragment.xml" value="0.21014492753623187" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/search_restaurant_fragment.xml" value="0.20742753623188406" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/second_offer_fragment.xml" value="0.19293478260869565" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/second_onboard_fragment.xml" value="0.19293478260869565" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/setting_fragment.xml" value="0.20244565217391305" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/splash_fragment.xml" value="0.19293478260869565" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/toolbar.xml" value="0.16927083333333334" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/layout/user_fragment.xml" value="0.264" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/KodluyoruzYemekSepetiFinalOdevi/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />

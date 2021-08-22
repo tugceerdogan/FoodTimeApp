@@ -53,15 +53,9 @@ class ApiRepository @Inject constructor(
         }
 
 
-    fun getRestaurantByCuisine(cuisine: String) =
+    fun getBasket() =
         performNetworkOperation {
-            remoteDataSource.getRestaurantsByCuisine(cuisine)
-        }
-
-
-    fun getOrder() =
-        performNetworkOperation {
-            authRemoteDataSource.getOrders()
+            authRemoteDataSource.getBaskets()
         }
 
     fun getUser() = performNetworkOperation {
@@ -72,9 +66,9 @@ class ApiRepository @Inject constructor(
         authRemoteDataSource.updateUser(request = user)
     }
 
-    fun postOrder(basketAddRequest: BasketAddRequest) =
+    fun postBasket(basketAddRequest: BasketAddRequest) =
         performNetworkOperation {
-            authRemoteDataSource.postOrder(basketAddRequest)
+            authRemoteDataSource.postBaskets(basketAddRequest)
         }
 
     fun logOut() {

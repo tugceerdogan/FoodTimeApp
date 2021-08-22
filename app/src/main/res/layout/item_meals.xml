@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/itemFoodCardView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
     android:layout_gravity="center_horizontal"
     android:layout_margin="10dp"
     app:cardCornerRadius="20dp"
@@ -34,7 +34,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:text="Food Name"
-                android:textSize="20sp" />
+                android:textSize="22sp" />
 
 
             <LinearLayout
@@ -51,13 +51,13 @@
                     android:layout_height="wrap_content"
                     android:text="20 $"
                     android:textAlignment="center"
-                    android:textSize="15sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="$"
-                    android:textSize="15sp" />
+                    android:textSize="18sp" />
 
 
             </LinearLayout>
