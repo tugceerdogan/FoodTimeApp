@@ -25,20 +25,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topAppBar" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/basket_recycler_view"
-        android:layout_width="411dp"
-        android:layout_height="519dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="471dp"
+        android:layout_marginTop="8dp"
         android:paddingBottom="55dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
-
-
-
 
     <ProgressBar
         android:id="@+id/basket_progress_bar"
@@ -56,10 +53,34 @@
         android:id="@+id/dataEmpty"
         android:layout_width="282dp"
         android:layout_height="270dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topAppBar"
         app:srcCompat="@drawable/empty_cart_white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#e96525"
+        android:fontFamily="@font/kleeone"
+        android:padding="12dp"
+        android:text="ORDER"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/basket_recycler_view" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

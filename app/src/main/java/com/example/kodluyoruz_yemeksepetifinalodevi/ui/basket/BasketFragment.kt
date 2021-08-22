@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
 import androidx.core.view.isEmpty
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -39,6 +41,7 @@ class BasketFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getBasket()
+
     }
 
     private fun getBasket() {
@@ -81,6 +84,10 @@ class BasketFragment : Fragment() {
         } else {
             binding?.basketProgressBar?.gone()
             binding?.basketRecyclerView?.show()
+            binding?.btnOrder?.setOnClickListener{
+                Toast.makeText(context,"Your order has been confirmed.",LENGTH_LONG).show()
+
+            }
         }
     }
 }

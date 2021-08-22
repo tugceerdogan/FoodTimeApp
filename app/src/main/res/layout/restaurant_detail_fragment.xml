@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/imageViewRestaurant"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="333dp"
+        android:layout_height="161dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
@@ -68,8 +68,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mealsRecyclerView"
-        android:layout_width="387dp"
-        android:layout_height="244dp"
+        android:layout_width="match_parent"
+        android:layout_height="266dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
