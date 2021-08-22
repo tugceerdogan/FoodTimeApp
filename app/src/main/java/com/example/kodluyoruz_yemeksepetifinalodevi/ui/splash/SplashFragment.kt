@@ -11,14 +11,12 @@ import androidx.navigation.fragment.findNavController
 import com.example.kodluyoruz_yemeksepetifinalodevi.R
 
 
-
-
 class SplashFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         Handler(Looper.getMainLooper()).postDelayed({
             val action = SplashFragmentDirections.actionSplashFragmentToOnboardingFragment()
             findNavController().navigate(action)

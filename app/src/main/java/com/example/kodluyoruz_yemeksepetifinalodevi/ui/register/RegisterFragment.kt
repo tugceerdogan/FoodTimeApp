@@ -51,27 +51,27 @@ class RegisterFragment : Fragment() {
                         Resource.Status.SUCCESS -> {
 
 
-                                    val action=RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
-                                    findNavController().navigate(action)
+                            val action =
+                                RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+                            findNavController().navigate(action)
 
-                            }
+                        }
 
 
                         Resource.Status.ERROR -> {
 
-                    val dialog = AlertDialog.Builder(context)
-                        .setTitle("Error")
-                        .setMessage("${it.message}")
-                        .setPositiveButton("Try Again!") { dialog, button ->
-                            dialog.dismiss()
+                            val dialog = AlertDialog.Builder(context)
+                                .setTitle("Error")
+                                .setMessage("${it.message}")
+                                .setPositiveButton("Try Again!") { dialog, button ->
+                                    dialog.dismiss()
+                                }
+                            dialog.show()
                         }
-                    dialog.show()
-                }
 
 
-
-                        }
-                    })
+                    }
+                })
 
         }
     }

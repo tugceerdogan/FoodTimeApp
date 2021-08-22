@@ -9,7 +9,6 @@ import com.example.kodluyoruz_yemeksepetifinalodevi.R
 
 
 class ThirdOnboardingFragment : Fragment() {
-    // TODO: Rename and change types of parameters
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,6 @@ class ThirdOnboardingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.third_onboarding_fragment, container, false)
     }
 

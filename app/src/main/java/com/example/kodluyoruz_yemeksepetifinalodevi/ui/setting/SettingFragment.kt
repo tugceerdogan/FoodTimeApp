@@ -1,7 +1,6 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.ui.setting
 
 
-
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.os.Bundle

@@ -33,10 +33,10 @@ class UserFragment : Fragment() {
     }
 
     companion object {
-        fun getImageResource(image : String?) : Int {
+        fun getImageResource(image: String?): Int {
             val resource = try {
                 image?.toInt()
-            } catch (e : Exception) {
+            } catch (e: Exception) {
                 Log.v("Profile Avatar", e.message.toString())
                 R.drawable.food_blogger
             }
@@ -70,19 +70,15 @@ class UserFragment : Fragment() {
     }
 
     private fun setLoading(isLoading: Boolean) {
-        if(isLoading)
-        {
+        if (isLoading) {
             _binding.profileProgressBar.show()
             _binding.myProfileTextView.gone()
-            //_binding.personalDetailsTextView.gone()
             _binding.ProfileCardView.gone()
             _binding.linearLayout2.gone()
 
-        }
-        else{
+        } else {
             _binding.profileProgressBar.gone()
             _binding.myProfileTextView.show()
-          //  _binding.personalDetailsTextView.show()
             _binding.ProfileCardView.show()
             _binding.linearLayout2.show()
         }
@@ -97,17 +93,14 @@ class UserFragment : Fragment() {
     }
 
     private fun addListeners() {
-       _binding.changeProfile.setOnClickListener {
-           findNavController().navigate(R.id.action_userFragment_to_settingFragment)
+        _binding.changeProfile.setOnClickListener {
+            findNavController().navigate(R.id.action_userFragment_to_settingFragment)
 
         }
         _binding.logOutCardView.setOnClickListener {
             viewModel.logOut()
-            val action=UserFragmentDirections.actionUserFragmentToSplashFragment()
+            val action = UserFragmentDirections.actionUserFragmentToSplashFragment()
             findNavController().navigate(action)
         }
     }
-
-
-
 }

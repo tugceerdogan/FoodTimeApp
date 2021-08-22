@@ -42,7 +42,8 @@ class LoginFragment : Fragment() {
 
                         }
                         Resource.Status.SUCCESS -> {
-                            val action=LoginFragmentDirections.actionLoginFragmentToRestaurantListFragment()
+                            val action =
+                                LoginFragmentDirections.actionLoginFragmentToRestaurantListFragment()
                             findNavController().navigate(action)
 
                         }
@@ -53,7 +54,7 @@ class LoginFragment : Fragment() {
                 })
         }
 
-        _binding.btnRegister.setOnClickListener{
+        _binding.btnRegister.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
             findNavController().navigate(action)
         }

@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 
 fun <T> performNetworkOperation(call: suspend () -> Resource<T>): LiveData<Resource<T>> {
 
-    return liveData(Dispatchers.IO){
+    return liveData(Dispatchers.IO) {
 
         emit(Resource.loading())
 
@@ -16,10 +16,10 @@ fun <T> performNetworkOperation(call: suspend () -> Resource<T>): LiveData<Resou
         val networkCall = call.invoke()
 
 
-        if(networkCall.status == Resource.Status.SUCCESS){
+        if (networkCall.status == Resource.Status.SUCCESS) {
             val data = networkCall.data!!
             emit(Resource.success(data))
-        } else if(networkCall.status == Resource.Status.ERROR) {
+        } else if (networkCall.status == Resource.Status.ERROR) {
             emit(
                 Resource.error(
                     "Error: ${networkCall.message}"

@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         val bottomNav: BottomNavigationView = findViewById(R.id.nav_view)
 
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController: NavController = navHostFragment.navController
 
         bottomNav.setupWithNavController(navController)
@@ -38,10 +39,10 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
 
-                R.id.onboardingFragment->bottomNav.hide()
+                R.id.onboardingFragment -> bottomNav.hide()
                 R.id.splashFragment -> bottomNav.hide()
-                R.id.loginFragment->bottomNav.hide()
-                R.id.registerFragment->bottomNav.hide()
+                R.id.loginFragment -> bottomNav.hide()
+                R.id.registerFragment -> bottomNav.hide()
 
                 else -> bottomNav.show()
             }
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return item.onNavDestinationSelected(findNavController(R.id.nav_host_fragment))
                 || super.onOptionsItemSelected(item)

@@ -60,7 +60,7 @@ class RestaurantDetailFragment : Fragment() {
                         .applyDefaultRequestOptions(options)
                         .load(restaurant.image).into(_binding.imageViewRestaurant)
                     _binding.textViewRestaurantName.text = restaurant.name
-                    _binding.textViewRestaurantAddress.text=restaurant.district
+                    _binding.textViewRestaurantAddress.text = restaurant.district
                     mealListAdapter.setMeals(restaurant.meals)
                     initViews()
                 }
@@ -79,10 +79,10 @@ class RestaurantDetailFragment : Fragment() {
         mealListAdapter.setMealOnClickListener(object : IMealClickListener {
             override fun onClick(name: MealsItem) {
                 val action =
-                RestaurantDetailFragmentDirections.actionRestaurantDetailFragmentToMealDetailFragment(
-                    name.id,
-                    args.id.toString()
-                )
+                    RestaurantDetailFragmentDirections.actionRestaurantDetailFragmentToMealDetailFragment(
+                        name.id,
+                        args.id.toString()
+                    )
                 findNavController().navigate(action)
 
 

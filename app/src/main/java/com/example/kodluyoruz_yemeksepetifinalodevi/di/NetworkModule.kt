@@ -19,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Qualifier
 
 @Module
-@InstallIn(ActivityRetainedComponent ::class)
+@InstallIn(ActivityRetainedComponent::class)
 class NetworkModule {
 
     @Provides
@@ -51,9 +51,6 @@ class NetworkModule {
         })
         return provideNoAuthOkHttpClient(builder.build())
     }
-
-
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     @Provides
@@ -138,9 +135,5 @@ annotation class AuthRetrofit
 @Retention(AnnotationRetention.BINARY)
 annotation class NetworkRetrofit
 
-/* @Provides
- fun provideRemoteDataSource(apiService: NetworkApiService): RemoteDataSource {
-     return RemoteDataSource(apiService)
- }*/
 
 

@@ -61,15 +61,19 @@ class RestaurantListFragment : Fragment() {
 
         initViewPager()
     }
+
     private fun initViewPager() {
-        val fragmentList = arrayListOf(FirstOfferFragment(), SecondOfferFragment(), ThirdOfferFragment())
-        val adapter = ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
+        val fragmentList =
+            arrayListOf(FirstOfferFragment(), SecondOfferFragment(), ThirdOfferFragment())
+        val adapter =
+            ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
         _binding.apply {
             viewPager.adapter = adapter
             dotsIndicator.setViewPager2(viewPager)
         }
     }
-    private fun setRestaurants(restaurantList : List<RestaurantsItem>?){
+
+    private fun setRestaurants(restaurantList: List<RestaurantsItem>?) {
 
         restaurantListAdapter.setData(restaurantList)
         _binding.restaurantsRecyclerView.adapter = restaurantListAdapter

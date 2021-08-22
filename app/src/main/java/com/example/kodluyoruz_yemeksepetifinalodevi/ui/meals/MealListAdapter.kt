@@ -9,7 +9,7 @@ import com.example.kodluyoruz_yemeksepetifinalodevi.databinding.ItemMealsBinding
 import com.example.kodluyoruz_yemeksepetifinalodevi.listeners.IMealClickListener
 
 
-class MealListAdapter: RecyclerView.Adapter<MealListAdapter.MealListViewHolder>() {
+class MealListAdapter : RecyclerView.Adapter<MealListAdapter.MealListViewHolder>() {
     private var mealList = ArrayList<MealsItem>()
 
     private var listener: IMealClickListener? = null
@@ -35,18 +35,22 @@ class MealListAdapter: RecyclerView.Adapter<MealListAdapter.MealListViewHolder>(
             )
         )
     }
+
     override fun onBindViewHolder(holder: MealListViewHolder, position: Int) {
         mealList?.get(position)?.let {
             holder.bind(it, listener)
         }
     }
+
     override fun getItemCount(): Int {
         return mealList.size
     }
+
     fun setMeals(newList: ArrayList<MealsItem>) {
         mealList = newList
         notifyDataSetChanged()
     }
+
     fun setMealOnClickListener(listener: IMealClickListener) {
         this.listener = listener
     }

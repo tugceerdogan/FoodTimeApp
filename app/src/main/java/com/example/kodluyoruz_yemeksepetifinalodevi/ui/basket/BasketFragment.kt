@@ -56,7 +56,7 @@ class BasketFragment : Fragment() {
                         binding?.basketRecyclerView?.adapter = adapter
                         adapter.setBasketList(it)
 
-                        if(response.data?.orderList?.size ==0){
+                        if (response.data?.orderList?.size == 0) {
 
                             binding?.basketRecyclerView?.isVisible = false
                             binding?.dataEmpty?.isVisible = true
@@ -84,8 +84,8 @@ class BasketFragment : Fragment() {
         } else {
             binding?.basketProgressBar?.gone()
             binding?.basketRecyclerView?.show()
-            binding?.btnOrder?.setOnClickListener{
-                Toast.makeText(context,"Your order has been confirmed.",LENGTH_LONG).show()
+            binding?.btnOrder?.setOnClickListener {
+                Toast.makeText(context, "Your order has been confirmed.", LENGTH_LONG).show()
 
             }
         }
