@@ -5,17 +5,12 @@
         android:icon="@drawable/restaurant_icon"
         android:title="Restaurants"/>
 
-    <item
-        android:id="@+id/orderFragment"
-        android:enabled="true"
-        android:icon="@drawable/order_icon"
-        android:title="Orders"/>
-
-    <item
+       <item
         android:id="@+id/basketFragment"
         android:enabled="true"
         android:icon="@drawable/shopping_cart_icon"
         android:title="Basket"/>
+
 
     <item
         android:id="@+id/userFragment"
@@ -23,6 +18,12 @@
         android:icon="@drawable/avatar_icon"
         android:title="Profile"/>
 
+
+    <item
+        android:id="@+id/settingFragment"
+        android:enabled="true"
+        android:icon="@drawable/setting_icon"
+        android:title="Setting"/>
 
 
 

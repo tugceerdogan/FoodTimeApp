@@ -1,6 +1,5 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.ui.mealDetail
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.kodluyoruz_yemeksepetifinalodevi.R
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.databinding.MealDetailFragmentBinding
 import com.example.kodluyoruz_yemeksepetifinalodevi.ui.meals.MealIngredientsAdapter
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.Resource
@@ -71,7 +70,6 @@ class MealDetailFragment : Fragment() {
                     _binding.ingredientsRecyclerView.adapter = adapter
                     _binding.priceTextView.text = meal.price
 
-                    //_binding.homeTextView.text = "Count: ${it.data?.characters?.size}
 
                 }
                 Resource.Status.ERROR -> {
@@ -86,7 +84,7 @@ class MealDetailFragment : Fragment() {
             _binding.progressBar.show()
             _binding.backButton.gone()
             _binding.mealImageView.gone()
-            _binding.orderButton.gone()
+            _binding.addBasketButton.gone()
             _binding.mealNameTextView.gone()
             _binding.totalLinearLayout.gone()
 
@@ -94,7 +92,7 @@ class MealDetailFragment : Fragment() {
             _binding.progressBar.gone()
             _binding.backButton.show()
             _binding.mealImageView.show()
-            _binding.orderButton.show()
+            _binding.addBasketButton.show()
             _binding.mealNameTextView.show()
             _binding.totalLinearLayout.show()
         }
@@ -107,9 +105,9 @@ class MealDetailFragment : Fragment() {
 
 
 
-        _binding.orderButton.setOnClickListener {
-            val orderAddRequest = OrderAddRequest(args.restaurantId, args.mealId)
-            viewModel.postOrder(orderAddRequest).observe(viewLifecycleOwner, {
+        _binding.addBasketButton.setOnClickListener {
+            val basketAddRequest = BasketAddRequest(args.restaurantId, args.mealId)
+            viewModel.postOrder(basketAddRequest).observe(viewLifecycleOwner, {
                 when (it.status) {
                     Resource.Status.LOADING -> {
                         Log.e("Loading", "loading")
@@ -119,7 +117,7 @@ class MealDetailFragment : Fragment() {
                     Resource.Status.SUCCESS -> {
                         setLoading(false)
                         _binding.ingredientsRecyclerView.show()
-                        findNavController().navigate(MealDetailFragmentDirections.actionMealDetailFragmentToRestaurantListFragment())
+                        findNavController().navigate(MealDetailFragmentDirections.actionMealDetailFragmentToBasketFragment())
 
                     }
                     Resource.Status.ERROR -> {

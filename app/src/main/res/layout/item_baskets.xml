@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="30dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/ordersItemRestaurantNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/notosanskrmedium"
+            android:textColor="#573621"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/ordersImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Kebapname" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ordersItemDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#a36846"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/ordersItemRestaurantNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/ordersItemRestaurantNameTextView"
+            tools:text="21.12.2023 -23:18" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="260dp"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="18dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.589"
+            app:layout_constraintStart_toEndOf="@id/ordersImageView"
+            app:layout_constraintTop_toBottomOf="@id/ordersItemDateTextView" />
+
+        <TextView
+            android:id="@+id/ordersItemFoodNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#573621"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:paddingVertical="8dp"
+            app:layout_constraintStart_toStartOf="@id/ordersItemDateTextView"
+            app:layout_constraintTop_toBottomOf="@id/ordersItemDateTextView"
+            tools:text="Hot Adana Kebab" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="260dp"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="18dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ordersImageView"
+            app:layout_constraintTop_toBottomOf="@id/ordersItemFoodNameTextView" />
+
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:paddingVertical="8dp"
+            android:textColor="#573621"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/ordersItemFoodNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            android:text="Total" />
+
+
+        <TextView
+            android:id="@+id/orderPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingVertical="8dp"
+            android:textColor="#a36846"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/text4"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            tools:text="58,90" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingVertical="8dp"
+            android:textColor="#a36846"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/orderPriceTextView"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            android:text=" $" />
+
+
+
+        <ImageView
+            android:id="@+id/ordersImageView"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cuisine" />
+
+        <Button
+            android:id="@+id/ordersRepeatButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawableEnd="@drawable/ic_baseline_repeat_24"
+            android:enabled="false"
+            android:text="Reorder"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="#a36846"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ordersInfoButton"
+            app:layout_constraintTop_toBottomOf="@id/orderPriceTextView" />
+
+        <Button
+            android:id="@+id/ordersInfoButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:drawableEnd="@drawable/ic_baseline_info_24"
+            android:enabled="false"
+            android:text="Detail"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="#a36846"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/text4"
+            app:layout_constraintTop_toBottomOf="@id/text4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

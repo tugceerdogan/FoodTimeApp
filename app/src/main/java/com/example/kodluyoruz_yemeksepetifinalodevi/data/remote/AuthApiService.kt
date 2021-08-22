@@ -1,12 +1,8 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.data.remote
 
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddResponse
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketResponse
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.Basket
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddRequest
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddRequest
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddResponse
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderResponse
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.UserRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.UserResponse
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.User
@@ -17,10 +13,10 @@ interface AuthApiService {
 
 
     @POST("a/order")
-    suspend fun postOrder(@Body request: OrderAddRequest): Response<OrderAddResponse>
+    suspend fun postOrder(@Body request: BasketAddRequest): Response<BasketAddResponse>
 
     @GET("a/order")
-    suspend fun getOrders(): Response<OrderResponse>
+    suspend fun getOrders(): Response<BasketResponse>
 
     @POST("a/order")
     suspend fun postBasket(@Body request: BasketAddRequest): Response<BasketAddResponse>

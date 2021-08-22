@@ -1,9 +1,6 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.data.remote
 
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddRequest
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddResponse
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddRequest
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddResponse
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.UserRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.BaseDataSource
 import javax.inject.Inject
@@ -18,8 +15,8 @@ class AuthRemoteDataSource @Inject constructor(private val authAPIService: AuthA
 
     suspend fun getOrders() = getResult { authAPIService.getOrders() }
 
-    suspend fun postOrder(orderAddRequest: OrderAddRequest) = getResult {
-        authAPIService.postOrder(orderAddRequest)
+    suspend fun postOrder(basketAddRequest: BasketAddRequest) = getResult {
+        authAPIService.postOrder(basketAddRequest)
     }
 
 

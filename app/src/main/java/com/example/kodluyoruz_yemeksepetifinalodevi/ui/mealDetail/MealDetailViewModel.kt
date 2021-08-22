@@ -5,8 +5,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.meal.MealsItem
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.meal.MealsResponse
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddRequest
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddResponse
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddResponse
 import com.example.kodluyoruz_yemeksepetifinalodevi.repository.ApiRepository
 import com.example.kodluyoruz_yemeksepetifinalodevi.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,6 +23,6 @@ class MealDetailsViewModel @Inject constructor(
         return apiRepository.getMealById(id)
     }
 
-    fun postOrder(orderAddRequest: OrderAddRequest): LiveData<Resource<OrderAddResponse>> =
-        apiRepository.postOrder(orderAddRequest)
+    fun postOrder(basketAddRequest: BasketAddRequest): LiveData<Resource<BasketAddResponse>> =
+        apiRepository.postOrder(basketAddRequest)
 }

@@ -32,9 +32,9 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding.btnRegister.setOnClickListener {
-            val name = _binding.editTextName.text.toString()
-            val email = _binding.editTextEmail.text.toString()
-            val password = _binding.editTextPassword.text.toString()
+            val name = _binding.editTextName.editText?.text.toString()
+            val email = _binding.editTextEmail.editText?.text.toString()
+            val password = _binding.editTextPassword.editText?.text.toString()
 
             _binding.editTextName.visibility = View.GONE
             _binding.editTextEmail.visibility = View.GONE

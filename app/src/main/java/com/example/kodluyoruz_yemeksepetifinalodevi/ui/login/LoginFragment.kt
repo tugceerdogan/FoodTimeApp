@@ -32,8 +32,8 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         _binding.btnLogin.setOnClickListener {
-            val email = _binding.editTextEmail.text.toString()
-            val password = _binding.editTextPassword.text.toString()
+            val email = _binding.editTextEmail.editText?.text.toString()
+            val password = _binding.editTextPassword.editText?.text.toString()
 
             viewModel.login(email, password)
                 .observe(viewLifecycleOwner, Observer {

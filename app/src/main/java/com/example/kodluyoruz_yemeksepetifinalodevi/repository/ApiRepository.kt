@@ -1,7 +1,7 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.repository
 
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.login.LoginRequest
-import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.order.OrderAddRequest
+import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.basket.BasketAddRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.profile.UserRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.entity.register.RegisterRequest
 import com.example.kodluyoruz_yemeksepetifinalodevi.data.local.LocalDataSource
@@ -72,9 +72,9 @@ class ApiRepository @Inject constructor(
         authRemoteDataSource.updateUser(request = user)
     }
 
-    fun postOrder(orderAddRequest: OrderAddRequest) =
+    fun postOrder(basketAddRequest: BasketAddRequest) =
         performNetworkOperation {
-            authRemoteDataSource.postOrder(orderAddRequest)
+            authRemoteDataSource.postOrder(basketAddRequest)
         }
 
     fun logOut() {

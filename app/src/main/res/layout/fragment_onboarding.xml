@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="Skip"
+        android:text="Next"
         android:textAllCaps="false"
         android:textColor="#5E453F"
         android:textSize="14sp"

@@ -46,68 +46,41 @@
         app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
 
     <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/textinputLayout"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="35dp"
-        app:helperText="example@example.com"
-        android:hint="Email"
-        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEnterAccount">
 
-
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30sp"
             android:backgroundTint="@color/white"
-            android:drawablePadding="10dp"
+            android:hint="Email"
             android:inputType="textEmailAddress"
-            android:padding="15dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:textColor="#5A453F"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/textinputLayout2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="35dp"
         app:endIconMode="password_toggle"
-        app:layout_constraintTop_toBottomOf="@+id/textinputLayout">
-
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30sp"
             android:backgroundTint="@color/white"
-            android:drawablePadding="10dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:padding="15dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:textColor="#5A453F"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            android:textColor="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="45dp"
         android:backgroundTint="#f4ab1e"
         android:fontFamily="@font/kleeone"
@@ -131,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textinputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
