@@ -16,7 +16,7 @@ class FirstOfferFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_offer, container, false)
+        return inflater.inflate(R.layout.first_offer_fragment, container, false)
     }
 
 }

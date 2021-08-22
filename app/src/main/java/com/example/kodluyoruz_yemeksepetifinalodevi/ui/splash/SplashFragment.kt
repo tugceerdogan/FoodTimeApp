@@ -1,6 +1,5 @@
 package com.example.kodluyoruz_yemeksepetifinalodevi.ui.splash
 
-import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -24,6 +23,6 @@ class SplashFragment : Fragment() {
             val action = SplashFragmentDirections.actionSplashFragmentToOnboardingFragment()
             findNavController().navigate(action)
         }, 5000)
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+        return inflater.inflate(R.layout.splash_fragment, container, false)
     }
 }

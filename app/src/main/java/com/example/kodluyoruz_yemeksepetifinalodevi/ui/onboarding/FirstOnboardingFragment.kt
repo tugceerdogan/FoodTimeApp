@@ -21,7 +21,7 @@ class FirstOnboardingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_onboarding, container, false)
+        return inflater.inflate(R.layout.first_onboarding_fragment, container, false)
     }
 
 }

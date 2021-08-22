@@ -19,7 +19,7 @@ class SecondOnboardingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second_onboard, container, false)
+        return inflater.inflate(R.layout.second_onboard_fragment, container, false)
     }
 
 }

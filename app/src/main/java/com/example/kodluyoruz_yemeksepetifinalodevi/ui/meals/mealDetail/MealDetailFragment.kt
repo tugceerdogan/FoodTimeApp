@@ -1,4 +1,4 @@
-package com.example.kodluyoruz_yemeksepetifinalodevi.ui.mealDetail
+package com.example.kodluyoruz_yemeksepetifinalodevi.ui.meals.mealDetail
 
 import android.os.Bundle
 import android.util.Log

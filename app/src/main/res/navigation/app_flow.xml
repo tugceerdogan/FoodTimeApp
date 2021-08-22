@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/mealDetailFragment"
-        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.mealDetail.MealDetailFragment"
+        android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.meals.mealDetail.MealDetailFragment"
         android:label="meal_detail_fragment"
         tools:layout="@layout/meal_detail_fragment">
 
@@ -82,7 +82,7 @@
         android:id="@+id/onboardingFragment"
         android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.onboarding.OnboardingFragment"
         android:label="OnboardingFragment"
-        tools:layout="@layout/fragment_onboarding">
+        tools:layout="@layout/onboarding_fragment">
         <action
             android:id="@+id/action_onboardingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -97,7 +97,7 @@
         android:id="@+id/splashFragment"
         android:name="com.example.kodluyoruz_yemeksepetifinalodevi.ui.splash.SplashFragment"
         android:label="SplashFragment"
-        tools:layout="@layout/fragment_splash">
+        tools:layout="@layout/splash_fragment">
         <action
             android:id="@+id/action_splashFragment_to_onboardingFragment"
             app:destination="@id/onboardingFragment" />

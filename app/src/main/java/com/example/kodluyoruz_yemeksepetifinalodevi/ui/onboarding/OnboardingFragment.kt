@@ -8,20 +8,21 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.kodluyoruz_yemeksepetifinalodevi.R
-import com.example.kodluyoruz_yemeksepetifinalodevi.databinding.FragmentOnboardingBinding
+
+import com.example.kodluyoruz_yemeksepetifinalodevi.databinding.OnboardingFragmentBinding
 import com.example.kodluyoruz_yemeksepetifinalodevi.sharedpref.SharedPreferencesManager
 import com.example.kodluyoruz_yemeksepetifinalodevi.viewpager.ViewPagerAdapter
 
 
 class OnboardingFragment : Fragment() {
-    private lateinit var binding: FragmentOnboardingBinding
+    private lateinit var binding: OnboardingFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentOnboardingBinding.inflate(inflater, container, false)
+        binding = OnboardingFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

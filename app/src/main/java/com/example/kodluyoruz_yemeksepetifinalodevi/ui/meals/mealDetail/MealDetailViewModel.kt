@@ -1,4 +1,4 @@
-package com.example.kodluyoruz_yemeksepetifinalodevi.ui.mealDetail
+package com.example.kodluyoruz_yemeksepetifinalodevi.ui.meals.mealDetail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.SavedStateHandle

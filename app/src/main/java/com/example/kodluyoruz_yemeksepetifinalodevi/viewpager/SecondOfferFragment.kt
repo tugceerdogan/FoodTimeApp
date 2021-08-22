@@ -15,7 +15,7 @@ class SecondOfferFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second_offer, container, false)
+        return inflater.inflate(R.layout.second_offer_fragment, container, false)
     }
 
 
