@@ -8,8 +8,6 @@ My goal was to create an application that looks like a Yemeksepeti.
 
 ![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Dagger Hilt
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Kotlin  Coroutine
- 
 ![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) ViewModel - Livedata
 
 ![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Retrofit
