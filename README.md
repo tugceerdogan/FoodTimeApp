@@ -4,29 +4,29 @@ My goal was to create an application that looks like a Yemeksepeti.
 
 ### Meanwhile, I used the following technologies :
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) MVVM Architecture
+- MVVM Architecture
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Dagger Hilt
+- Dagger Hilt
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) ViewModel - Livedata
+- ViewModel - Livedata
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Retrofit
+- Retrofit
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Recyclerview
+- Recyclerview
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Fragments
+- Fragments
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Navigation
+- Navigation
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) ViewBinding
+- ViewBinding
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) ViewPager2
+- ViewPager2
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Bottom Navigation Bar
+- Bottom Navigation Bar
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Lottie
+- Lottie
 
-![#e96525](https://via.placeholder.com/15/e96525/000000?text=+) Glide
+- Glide
 
 | Onboarding |
 | ------------ |
